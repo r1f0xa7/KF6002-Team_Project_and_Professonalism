@@ -1,0 +1,61 @@
+[2024-08-14 13:57:16] Error: [2] Undefined variable $forumModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 13:57:16] Uncaught exception: Call to a member function getPosts() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:09:31] Error: [2] Undefined variable $forumModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:09:31] Uncaught exception: Call to a member function getPosts() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:10:38] Error: [2] Undefined variable $forumModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:10:38] Uncaught exception: Call to a member function getPosts() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:10:38] Error: [2] Undefined variable $forumModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:10:38] Uncaught exception: Call to a member function getPosts() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\forum\forum_list.php on line 3
+[2024-08-14 14:12:10] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 21
+[2024-08-14 14:12:25] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 21
+[2024-08-14 14:12:36] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 21
+[2024-08-14 14:16:48] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 23
+[2024-08-14 14:16:52] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 23
+[2024-08-14 14:16:54] Uncaught exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rifat.forum' doesn't exist in C:\Users\mridg\OneDrive\Desktop\event-management\models\Forum.php on line 23
+[2024-08-14 15:11:18] Error: [8] session_start(): Ignoring session_start() because a session is already active in C:\Users\mridg\OneDrive\Desktop\event-management\views\auth\login.php on line 6
+[2024-08-14 15:17:50] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:06] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:11] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:12] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:19] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:22] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:18:31] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:21:03] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:22:41] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:23:00] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:29:08] Error: [2] Undefined variable $userModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 3
+[2024-08-14 15:29:08] Uncaught exception: Call to a member function getUserById() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 3
+[2024-08-14 15:31:42] Error: [2] Undefined array key "user_id" in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 7
+[2024-08-14 15:31:42] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 14
+[2024-08-14 15:31:42] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 18
+[2024-08-14 15:31:42] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:31:42] Error: [8192] ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:32:51] Error: [2] Undefined array key "user_id" in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 7
+[2024-08-14 15:32:51] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 14
+[2024-08-14 15:32:51] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 18
+[2024-08-14 15:32:51] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:32:51] Error: [8192] ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:34:55] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:01] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:05] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:06] Error: [2] Undefined array key "user_id" in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 7
+[2024-08-14 15:35:06] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 14
+[2024-08-14 15:35:06] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 18
+[2024-08-14 15:35:06] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:35:06] Error: [8192] ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:35:09] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:14] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:16] Error: [2] Undefined array key "user_id" in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 7
+[2024-08-14 15:35:16] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 14
+[2024-08-14 15:35:16] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 18
+[2024-08-14 15:35:16] Error: [2] Trying to access array offset on value of type bool in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:35:16] Error: [8192] ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\profile.php on line 22
+[2024-08-14 15:35:18] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:22] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:25] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:35:26] Error: [2] Undefined array key "user_name" in C:\Users\mridg\OneDrive\Desktop\event-management\views\dashboard.php on line 5
+[2024-08-14 15:41:52] Error: [8] session_start(): Ignoring session_start() because a session is already active in C:\Users\mridg\OneDrive\Desktop\event-management\views\auth\login.php on line 6
+[2024-08-14 15:47:19] Error: [2] Undefined variable $userModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\edit_profile.php on line 3
+[2024-08-14 15:47:19] Uncaught exception: Call to a member function getUserById() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\edit_profile.php on line 3
+[2024-08-14 15:53:44] Error: [2] Undefined variable $userModel in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\edit_profile.php on line 3
+[2024-08-14 15:53:44] Uncaught exception: Call to a member function getUserById() on null in C:\Users\mridg\OneDrive\Desktop\event-management\views\users\edit_profile.php on line 3

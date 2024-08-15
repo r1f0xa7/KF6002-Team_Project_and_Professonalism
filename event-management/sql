@@ -1,0 +1,124 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS event_management;
+USE event_management;
+
+-- Users table
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    token VARCHAR(100) DEFAULT NULL,
+    reset_token VARCHAR(100) DEFAULT NULL,
+    reset_token_expiry DATETIME DEFAULT NULL,
+    is_verified TINYINT(1) DEFAULT 0,
+    role ENUM('user', 'admin') DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Events table
+CREATE TABLE IF NOT EXISTS events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Attendance table
+CREATE TABLE IF NOT EXISTS attendance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    event_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE,
+    UNIQUE KEY user_event (user_id, event_id)
+);
+
+
+-- Create the forum table
+CREATE TABLE IF NOT EXISTS forum (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    post_title VARCHAR(255) NOT NULL,
+    post_content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Create the comments table
+CREATE TABLE IF NOT EXISTS comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    forum_id INT NOT NULL,
+    user_id INT NOT NULL,
+    comment_content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (forum_id) REFERENCES forum(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+-- Forum posts table
+CREATE TABLE IF NOT EXISTS forum_posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Forum comments table
+CREATE TABLE IF NOT EXISTS forum_comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT NOT NULL,
+    user_id INT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES forum_posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Example admin user
+INSERT INTO users (name, email, password, is_verified, role)
+VALUES ('Admin User', 'admin@rosefoundation.com', '$2y$10$T8Ff6SjJxQoPHK78D/4J..4pHHZq8DJVuP9m5KcL8BkISbBgBPIlC', 1, 'admin'); -- Password: password
+
+-- Example regular user
+INSERT INTO users (name, email, password, is_verified, role)
+VALUES ('John Doe', 'johndoe@example.com', '$2y$10$h7jbTjZZ14/hWQkxiUVgruv2P0yB4Q1o9DqJkP3gHFU6XkxwJ6g5S', 1, 'user'); -- Password: password
+
+-- Example events
+INSERT INTO events (title, description, date, time, location)
+VALUES 
+('Cervical Cancer Screening', 'A comprehensive screening event for cervical cancer.', '2024-08-20', '10:00:00', 'Kuala Lumpur Health Clinic'),
+('HPV Awareness Seminar', 'A seminar to raise awareness about HPV and its link to cervical cancer.', '2024-09-15', '14:00:00', 'Penang Women\'s Health Center'),
+('Community Health Fair', 'A health fair offering various screenings, including cervical cancer.', '2024-10-05', '09:00:00', 'Johor Bahru Community Hall'),
+('Free HPV Vaccination', 'Free HPV vaccination event for eligible participants.', '2024-10-25', '11:00:00', 'Melaka General Hospital');
+
+-- Example attendance
+INSERT INTO attendance (user_id, event_id)
+VALUES 
+(2, 1), -- John Doe attending Cervical Cancer Screening
+(2, 3); -- John Doe attending Community Health Fair
+
+-- Example forum posts
+INSERT INTO forum_posts (user_id, title, content)
+VALUES 
+(2, 'Cervical Cancer Awareness', 'Cervical cancer can be prevented with early screening.'),
+(2, 'HPV Vaccination Benefits', 'HPV vaccination is recommended for girls and boys aged 9 to 12.');
+
+-- Example forum comments
+INSERT INTO forum_comments (post_id, user_id, content)
+VALUES 
+(1, 2, 'I totally agree, early detection saves lives!'),
+(2, 2, 'HPV vaccination is crucial for prevention.');
+
+-- End of SQL script
